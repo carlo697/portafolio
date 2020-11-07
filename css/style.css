@@ -1,6 +1,7 @@
 :root {
-	--rosado: #E91E63;;
+	--azul: #4dabf7;
 	--gris: #333333;
+	--rosado: #E91E63;
 }
 
 * {
@@ -34,23 +35,19 @@ button {
 	width: 100%;
 	transition: 0.5s;
 	z-index: 1000;
-
 	border-bottom: 1px solid rgba(255, 255, 255, 30%);
+	padding: 15px 40px 15px 30px;
 }
 
 .sticky.area-nav {
 	background-color: white;
 	color: black;
 	box-shadow: 0px 3px 4px rgba(0, 0, 0, 20%);
+	padding: 10px 40px 10px 30px;
 }
 
 .area-nav .contenedor {
-	margin: 10px 40px 10px 30px;
 	position: relative;
-}
-
-.sticky .contenedor {
-	margin: 10px 40px 10px 30px;
 }
 
 .barra-navegacion {
@@ -64,7 +61,7 @@ button {
 	width: 34px;
 	height: 34px;
 	background-color: transparent;
-	color: var(--rosado);
+	color: var(--azul);
 	font-size: 1.5em;
 }
 
@@ -87,7 +84,7 @@ button {
 }
 
 .sticky .nav-titulo {
-	color: var(--rosado);
+	color: var(--azul);
 }
 
 
@@ -139,7 +136,7 @@ button {
 	top: 100%;
 	height: 2px;
 	width: 0;
-	background-color: var(--rosado);
+	background-color: var(--azul);
 	transition: 0.2s;
 }
 
@@ -168,7 +165,7 @@ button {
 	background-color: black;
 	height: 2px;
 	width: 100px;
-	margin-bottom: 30px;
+	margin-bottom: 80px;
 }
 
 
@@ -195,12 +192,14 @@ button {
 
 .presentacion-titulo1 {
 	font-size: 0.9em;
+	text-shadow: 2px 2px rgba(1, 1, 1, 100%);
 }
 
 .presentacion-titulo2 {
 	font-size: 1.8em;
 	font-weight: 400;
 	margin: 20px 0px 20px;
+	text-shadow: 2px 2px rgba(1, 1, 1, 100%);
 }
 
 
@@ -217,7 +216,7 @@ button {
 }
 
 .boton {
-	background: #E91E63;
+	background: var(--rosado);
 	color: white;
 	padding: 10px 40px;
 	border-radius: 30px;
@@ -242,7 +241,7 @@ button {
 
 
 .area-acerca {
-	padding: 70px 30px 30px 30px;
+	padding: 80px 30px 80px 30px;
 }
 
 .foto {
@@ -261,7 +260,8 @@ button {
 }
 
 .informacion p {
-	text-align: center;
+	text-align: justify;
+	margin-bottom: 20px;
 }
 
 @media (min-width: 700px) {
@@ -283,7 +283,6 @@ button {
 	}
 
 	.informacion p {
-		text-align: justify;
 		padding-right: 30px;
 	}
 }
@@ -293,13 +292,13 @@ button {
 
 .area-servicios {
 	background: #F3F4F3;
-	padding: 70px 30px 50px 30px;
+	padding: 80px 30px 80px 30px;
 }
 
 .grid-servicios {
 	display: grid;
 	grid-template-columns: 1fr;
-	justify-content: space-between;
+	align-items: center;
 	grid-gap: 40px;
 }
 
@@ -308,14 +307,26 @@ button {
 	text-align: center;
 }
 
+.servicio-contenedor img {
+	width: 150px;
+
+	box-shadow: 4px 4px 30px 5px rgba(0, 0, 0, 20%);
+	margin-bottom: 10px;
+}
+
 .servicio-contenedor h3 {
 	margin-bottom: 20px;
 	font-weight: 600;
 }
 
-.fa-address-card {
+p a {
+	text-decoration: underline;
+}
+
+.servicio-contenedor .fa-address-card {
 	font-size: 3em;
 	margin-bottom: 20px;
+	background-color: 
 }
 
 .fa-address-card {
@@ -343,7 +354,7 @@ button {
 
 
 .area-portafolio {
-	padding: 70px 30px 50px 30px;
+	padding: 80px 30px 80px 30px;
 }
 
 .area-portafolio p {
@@ -379,13 +390,46 @@ button {
 }
 
 
+.proyecto-contenedor {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.proyecto-fondo {
+	width: 100%;
+	transition: 0.5s;
+}
+
+.proyecto-info {
+	width: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	bottom: -30%;
+	transition: 0.2s;
+}
+
+.proyecto-contenedor:hover .proyecto-info {
+	bottom: 0;
+}
+
+.proyecto-info h3 {
+	color: white;
+	margin: 0px 5px 10px 5px;
+	text-align: center;
+	font-size: 1em;
+}
+
+
 
 
 
 
 .area-contactame {
 	background: #F3F4F3;
-	padding: 70px 15px 80px 15px;
+	padding: 80px 15px 80px 15px;
 }
 
 .contactame-descripcion {
@@ -413,10 +457,10 @@ button {
 	font-size: 1em;
 }
 
-.medio-contenedor .fa-address-card {
+.icono-medio  {
 	font-size: 2em;
 	margin-bottom: 20px;
-	color: var(--rosado);
+	color: var(--azul);
 }
 
 .medio-contenedor p {
@@ -456,7 +500,7 @@ button {
 	display: flex;
 	justify-content: center;
 
-	padding: 30px 0px 40px;
+	padding: 40px 0px 60px;
 }
 
 
