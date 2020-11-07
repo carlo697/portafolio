@@ -2,6 +2,11 @@
 	--azul: #4dabf7;
 	--gris: #333333;
 	--rosado: #E91E63;
+	--barra: #3E6680;
+
+	--fondo1: #EE8434;
+	--fondo2: #C95D63;
+	--fondo3: #717EC3;
 }
 
 * {
@@ -40,7 +45,7 @@ button {
 }
 
 .sticky.area-nav {
-	background-color: white;
+	background-color: var(--barra);
 	color: black;
 	box-shadow: 0px 3px 4px rgba(0, 0, 0, 20%);
 	padding: 10px 40px 10px 30px;
@@ -75,7 +80,7 @@ button {
 
 
 .sticky .nav-enlace {
-	color: var(--gris);
+	color: white;
 	font-weight: 600;
 }
 
@@ -461,6 +466,18 @@ p a {
 	font-size: 2em;
 	margin-bottom: 20px;
 	color: var(--azul);
+}
+
+.red-icon {
+	font-size: 2.5em;
+}
+
+.whatsapp {
+	color: #25D366;
+}
+
+.facebook {
+	color: 	#4267B2;
 }
 
 .medio-contenedor p {
