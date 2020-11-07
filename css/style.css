@@ -25,6 +25,13 @@ html {
 	color: var(--gris);
 }
 
+@media (min-width: 1300px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+
 a {
 	text-decoration-line: none;
 	color: black;
@@ -297,15 +304,52 @@ button {
 
 .area-servicios {
 	background: #F3F4F3;
-	padding: 80px 30px 80px 30px;
+	padding: 80px 10px 80px 10px;
 }
 
-.grid-servicios {
+.grid-servicios {/*
 	display: grid;
 	grid-template-columns: 1fr;
 	align-items: center;
-	grid-gap: 40px;
+	grid-gap: 40px;*/
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
+
+.servicio-contenedor {
+	flex-basis: 300px;
+	max-width: 400px;
+	flex-grow: 1;
+	margin-bottom: 40px;
+}
+
+@media (min-width: 600px) {
+	.grid-servicios {
+
+	}
+}
+
+@media (min-width: 500px) {
+	.servicio-contenedor {
+
+	}
+}
+
+/*@media (min-width: 600px) {
+	.grid-servicios {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 800px) {
+	.grid-servicios {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}*/
 
 .servicio-contenedor {
 	padding: 10px;
@@ -337,20 +381,6 @@ p a {
 .fa-address-card {
 	font-size: 3em;
 	margin-bottom: 20px;
-}
-
-@media (min-width: 600px) {
-	.grid-servicios {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-@media (min-width: 800px) {
-	.grid-servicios {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-	}
 }
 
 
