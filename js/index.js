@@ -1,5 +1,6 @@
 var header = document.querySelector(".area-nav");
 const botonMenu = document.querySelector(".barra-toggle");
+const botonSubir = document.querySelector(".boton-subir");
 let menu = document.querySelector(".menu-contenedor");
 
 eventListeners();
@@ -17,6 +18,13 @@ function alHacerScroll () {
 	}
 	else {
 		header.classList.remove("sticky");
+	}
+
+	if (window.scrollY > 300) {
+		botonSubir.classList.add("mostrar");
+	}
+	else {
+		botonSubir.classList.remove("mostrar");
 	}
 }
 
