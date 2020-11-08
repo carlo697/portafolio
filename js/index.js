@@ -82,8 +82,8 @@ function abrirSlider(e) {
 		}
 
 		sliderImagen.src = info[2];
-		sliderCabecera.textContent = titulo;
-		sliderTexto.textContent = texto;
+		sliderCabecera.innerHTML = titulo;
+		sliderTexto.innerHTML = texto;
 
 		slider.classList.remove("esconder");
 	}
