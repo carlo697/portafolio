@@ -106,17 +106,6 @@ button {
 }
 
 
-@media (min-width: 750px) {
-	.nav-enlaces {
-		display: block;
-	}
-
-	.barra-toggle {
-		display: none;
-	}
-}
-
-
 
 .menu-contenedor {
 	position: fixed;
@@ -131,6 +120,16 @@ button {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+@media (min-width: 750px) {
+	.nav-enlaces {
+		display: block;
+	}
+
+	.barra-toggle {
+		display: none;
+	}
 }
 
 .menu-enlace {

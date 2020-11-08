@@ -10,7 +10,11 @@ const botonCerrarSlider = document.querySelector("#botonCerrarSlider");
 const sliderImagen = document.querySelector(".imagen-seleccionada");
 const sliderLista = document.querySelector("#sliderLista");
 
+// Media querry.
+let menuMedia = window.matchMedia("(min-width: 750px)")
+
 eventListeners();
+enMenuMedia(menuMedia);
 
 function eventListeners() {
 	document.body.onscroll = alHacerScroll;
@@ -20,6 +24,8 @@ function eventListeners() {
 	proyectos.addEventListener("click", abrirSlider);
 	botonCerrarSlider.addEventListener("click", cerrarSlider);
 	sliderLista.addEventListener("click", abrirMiniatura);
+	slider.addEventListener("click", clickSlider);
+	menuMedia.addListener(enMenuMedia);
 }
 
 function alHacerScroll () {
@@ -93,4 +99,20 @@ function abrirMiniatura(e) {
 		sliderImagen.src = target.src;
 	}
 	
+}
+
+function clickSlider(e) {
+	const target = e.target;
+
+	if (target.classList.contains("slider")) {
+		cerrarSlider();
+	}
+}
+
+function enMenuMedia(x) {
+	console.log(x.matches);
+
+	if (x.matches) {
+		menu.classList.add("hide");
+	}
 }
