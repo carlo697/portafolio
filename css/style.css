@@ -596,15 +596,39 @@ p a {
 	padding: 20px;
 
 	overflow: auto;
+	color: white;
+}
+
+.slider .cabecera {
+	margin-bottom: 5px;
+}
+
+.slider .texto {
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+@media (min-width: 500px) {
+	.slider .cabecera {
+		margin-bottom: 20px;
+	}
+
+	.slider .texto {
+		margin-bottom: 20px;
+	}
 }
 
 .imagen-seleccionada {
 	width: 90vw;
+	object-fit: contain;
 	margin-bottom: 20px;
 }
 
 .slider ul {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .imagen-miniatura {

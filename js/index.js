@@ -9,6 +9,8 @@ const slider = document.querySelector(".slider");
 const botonCerrarSlider = document.querySelector("#botonCerrarSlider");
 const sliderImagen = document.querySelector(".imagen-seleccionada");
 const sliderLista = document.querySelector("#sliderLista");
+const sliderCabecera = document.querySelector(".slider .cabecera");
+const sliderTexto = document.querySelector(".slider .texto");
 
 // Media querry.
 let menuMedia = window.matchMedia("(min-width: 750px)")
@@ -60,15 +62,18 @@ function abrirSlider(e) {
 	const target = e.target;
 
 	if (target.hasAttribute("data-imagenes")) {
-		const imagenes = JSON.parse(target.getAttribute("data-imagenes"));
+		const info = JSON.parse(target.getAttribute("data-imagenes"));
+
+		const titulo = info[0];
+		const texto = info[1];
 
 		limpiarSlider();
 
-		for (url of imagenes) {
+		for (let i = 2; i < info.length; i++) {
 			const li = document.createElement("li");
 
 			const img = document.createElement("img");
-			img.src = url;
+			img.src = info[i];
 			img.className = "imagen-miniatura";
 
 			li.appendChild(img);
@@ -76,7 +81,9 @@ function abrirSlider(e) {
 			sliderLista.appendChild(li);
 		}
 
-		sliderImagen.src = imagenes[0];
+		sliderImagen.src = info[2];
+		sliderCabecera.textContent = titulo;
+		sliderTexto.textContent = texto;
 
 		slider.classList.remove("esconder");
 	}
@@ -97,6 +104,7 @@ function abrirMiniatura(e) {
 
 	if (target.classList.contains("imagen-miniatura")) {
 		sliderImagen.src = target.src;
+		sliderImagen.scrollIntoView();
 	}
 	
 }
