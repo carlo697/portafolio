@@ -10,7 +10,6 @@
 		<script src="https://kit.fontawesome.com/e89d481fed.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,700,800" rel="stylesheet">
-
 	</head>
 	<body>
 		<!-- Header -->
@@ -71,7 +70,7 @@
 			<div class="grid-servicios">
 				<div class="servicio-contenedor">
 					<!-- <i class="fas fa-address-card"></i> -->
-					<img src="img/electronica.jpg" alt="">
+					<img src="img/web.jpg" alt="">
 					<h3>Desarrollo Web Front-end</h3>
 					<p>Conocimiento autodidacta de los lenguajes HTML, CSS y JavaScript para la construcción de plantillas para páginas webs.</p>
 				</div>
@@ -85,14 +84,14 @@
 
 				<div class="servicio-contenedor">
 					<!-- <i class="fas fa-address-card"></i> -->
-					<img src="img/unity.png" alt="">
+					<img src="img/unity.jpg" alt="">
 					<h3>Unity 3D</h3>
 					<p>Creación de ambientes tridimensionales interactivos mediante el motor de renderizado <a href="https://unity.com/es" target="_blank">Unity</a> y el lenguaje de programacion C#.</p>
 				</div>
 
 				<div class="servicio-contenedor">
 					<!-- <i class="fas fa-address-card"></i> -->
-					<img src="img/blender.png" alt="">
+					<img src="img/blender.jpg" alt="">
 					<h3>Blender 3D</h3>
 					<p>Modelado de objetos 3D de todo tipo con el software de código abierto <a href="https://www.blender.org/" target="_blank">Blender</a>.</p>
 				</div>
@@ -104,22 +103,35 @@
 			<h2 class="area-titulo">Portafolio</h2>
 			<span class="linea"></span>
 
-			<p>Cras metus felis, consectetur ornare pretium eu, hendrerit id magna. Aenean at ligula a sem malesuada elementum. Quisque varius maximus laoreet. Curabitur sed faucibus elit. Donec a gravida ex.</p>
+			<p>Algunos proyectos personales y otras cosas que he realizado.</p>
 
 			<div class="grid-proyectos">
-				<a href="https://carlo697.github.io/calculo-figuras/" target="_blank" class="proyecto-contenedor">
-					<img class="proyecto-fondo" class="foto" src="img/figuras-geometricas.png" alt="">
+
+				<div class="proyecto-contenedor">
+					<a href="https://carlo697.github.io/landing-01/" target="_blank" class="proyecto-contenedor">
+						<img class="proyecto-fondo" class="foto" src="img/landing1.jpg" alt="">
+					</a>
+					<div class="proyecto-info">
+						<h3>Landing Page</h3>
+					</div>
+				</div>
+
+				<div class="proyecto-contenedor">
+					<a href="https://carlo697.github.io/calculo-figuras/" target="_blank" class="proyecto-contenedor">
+						<img class="proyecto-fondo" class="foto" src="img/figuras-geometricas.png" alt="">
+					</a>
 
 					<div class="proyecto-info">
 						<h3>Calculo de variables de figuras geométricas</h3>
 					</div>
-				</a>
-				
-				<img class="proyecto-img" class="foto" src="img/progreso.jpg" alt="">
-				<img class="proyecto-img" class="foto" src="img/progreso.jpg" alt="">
-				<img class="proyecto-img" class="foto" src="img/progreso.jpg" alt="">
-				<img class="proyecto-img" class="foto" src="img/progreso.jpg" alt="">
-				<img class="proyecto-img" class="foto" src="img/progreso.jpg" alt="">
+				</div>
+
+				<div class="proyecto-contenedor">
+					<img class="proyecto-fondo" class="foto" src="img/capacimetro.jpg" alt="" data-imagenes='["img/capacimetro1.jpg", "img/capacimetro2.png"]'>
+					<div class="proyecto-info">
+						<h3>Capacimetro con microcontrolador PIC</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -128,7 +140,7 @@
 			<h2 class="area-titulo">Contáctame</h2>
 			<span class="linea"></span>
 
-			<p class="contactame-descripcion">Cras metus felis, consectetur ornare pretium eu, hendrerit id magna. Aenean at ligula a sem malesuada elementum.</p>
+			<p class="contactame-descripcion">Puedes comunicarte conmigo a través de los siguientes medios.</p>
 
 			<div class="grid-medios">
 				<div class="medio-contenedor">
@@ -169,6 +181,13 @@
 		<a href="#inicio" class="boton-subir hide">
 			<i class="fas fa-chevron-up"></i>
 		</a>
+
+		<div class="slider esconder">
+			<img class="imagen-seleccionada" src="img/capacimetro1.jpg" alt="">
+			<ul id="sliderLista">
+			</ul>
+			<button id="botonCerrarSlider" class="boton-cerrar"><i class="fas fa-times-circle"></i></button>
+		</div>
 
 		<script src="js/index.js"></script>
 	</body>

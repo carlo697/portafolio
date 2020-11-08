@@ -188,6 +188,7 @@ button {
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
+	text-align: center;
 }
 
 .area-presentacion::before {
@@ -196,7 +197,7 @@ button {
 	z-index: -10;
 	height: 100%;
 	width: 100%;
-	background-image: url("../img/presentacion.png");
+	background-image: url("../img/presentacion.jpg");
 	background-size: 150vw;
 	transform: scale(1.1);
 	filter: blur(2px) brightness(0.6);
@@ -262,7 +263,7 @@ button {
 }
 
 .informacion {
-
+	max-width: 700px;
 }
 
 .informacion h3 {
@@ -434,6 +435,7 @@ p a {
 .proyecto-fondo {
 	width: 100%;
 	transition: 0.5s;
+	cursor: pointer;
 }
 
 .proyecto-info {
@@ -575,4 +577,62 @@ p a {
 
 .boton-subir.mostrar {
 	opacity: 1;
+}
+
+
+
+.slider {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2000;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 20px;
+
+	overflow: auto;
+}
+
+.imagen-seleccionada {
+	width: 90vw;
+	margin-bottom: 20px;
+}
+
+.slider ul {
+	display: flex;
+}
+
+.imagen-miniatura {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border: 2px solid white;
+	margin-right: 10px;
+	cursor: pointer;
+	transition: transform 0.5s;
+}
+
+.imagen-miniatura:hover {
+	transform: scale(1.1);
+}
+
+.boton-cerrar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 20px;
+	font-size: 2em;
+	background-color: transparent;
+	color: var(--rosado);
+}
+
+
+.esconder {
+	display: none;
 }
