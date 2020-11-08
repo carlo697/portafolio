@@ -610,6 +610,10 @@ p a {
 	justify-content: center;
 }
 
+.slider ul li {
+	list-style: none;
+}
+
 .imagen-miniatura {
 	width: 100px;
 	height: 100px;
