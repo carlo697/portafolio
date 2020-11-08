@@ -13,7 +13,7 @@ const sliderCabecera = document.querySelector(".slider .cabecera");
 const sliderTexto = document.querySelector(".slider .texto");
 
 // Media querry.
-let menuMedia = window.matchMedia("(min-width: 750px)")
+let menuMedia = window.matchMedia("(min-width: 800px)")
 
 eventListeners();
 enMenuMedia(menuMedia);
