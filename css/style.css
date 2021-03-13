@@ -238,6 +238,7 @@ button {
 	padding: 10px 40px;
 	border-radius: 30px;
 	transition: 0.2s;
+	display: inline-block;
 }
 
 .boton:hover {
@@ -379,7 +380,7 @@ p a {
 
 
 .area-portafolio {
-	padding: 80px 30px 80px 30px;
+	padding: 80px 10px 80px 10px;
 	background: var(--rustyred);
 }
 
@@ -404,7 +405,11 @@ p a {
 @media (min-width: 600px) {
 	.grid-proyectos {
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 25px;
+		grid-gap: 80px 40px;
+	}
+
+	.area-portafolio {
+		padding: 40px 30px 80px 40px;
 	}
 }
 
@@ -412,26 +417,37 @@ p a {
 
 
 .proyecto-caja {
-	display: flex;
-	flex-direction: column;
 	align-items: center;
-	margin-bottom: 40px;
+
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 0.5em;
+	overflow: hidden;
+	max-width: 600px;
 }
 
 .proyecto-titulo {
-	margin-bottom: 20px;
-	text-align: center;
+	margin-bottom: 0.6em;
+	height: 50px;
 }
 
-.proyecto-caja a {
+.proyecto-img-contenedor {
 	display: block;
 }
 
+.proyecto-caja a {
+	margin: 0 auto;
+}
 
 .proyecto-img {
 	width: 100%;
-	margin-bottom: 20px;
 	cursor: pointer;
+}
+
+.proyecto-contenido {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em 1.5em;
 }
 
 
