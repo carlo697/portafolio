@@ -4,13 +4,11 @@ const botonSubir = document.querySelector(".boton-subir");
 const menu = document.querySelector(".menu-contenedor");
 const proyectos = document.querySelector(".grid-proyectos");
 
-// Slider.
-const slider = document.querySelector(".slider");
-const botonCerrarSlider = document.querySelector("#botonCerrarSlider");
-const sliderImagen = document.querySelector(".imagen-seleccionada");
-const sliderLista = document.querySelector("#sliderLista");
-const sliderCabecera = document.querySelector(".slider .cabecera");
-const sliderTexto = document.querySelector(".slider .texto");
+// Modal.
+const modal = document.querySelector(".modal");
+const botonCerrarModal = document.querySelector("#botonCerrarModal");
+const listaImagenes = document.querySelector(".imagenes-lista");
+const imagenSeleccionada = document.querySelector(".imagen-seleccionada");
 
 // Media querry.
 let menuMedia = window.matchMedia("(min-width: 800px)")
@@ -21,13 +19,40 @@ enMenuMedia(menuMedia);
 function eventListeners() {
 	document.body.onscroll = alHacerScroll;
 
+	mostrarProyectos();
+
 	botonMenu.addEventListener("click", clickBotonMenu);
 	header.addEventListener("click", clickMenu);
-	proyectos.addEventListener("click", abrirSlider);
-	botonCerrarSlider.addEventListener("click", cerrarSlider);
-	sliderLista.addEventListener("click", abrirMiniatura);
-	slider.addEventListener("click", clickSlider);
+
+	proyectos.addEventListener("click", clickEnProyectos);
+
+	botonCerrarModal.addEventListener("click", cerrarModal);
+	listaImagenes.addEventListener("click", abrirMiniatura);
+
 	menuMedia.addListener(enMenuMedia);
+}
+
+function mostrarProyectos() {
+	const padre = document.querySelector(".grid-proyectos");
+
+	listaProyectos.forEach(proyecto => {
+		const {id, imagen, url, titulo} = proyecto;
+
+		const contenedor = document.createElement("div");
+		contenedor.classList.add("proyecto-caja");
+
+		contenedor.innerHTML = `
+			<img class="proyecto-img" src="${imagen}" data-proyecto="${id}">
+			<div class="proyecto-contenido">
+				<h3 class="proyecto-titulo">${titulo}</h3>
+				<button class="boton" target="_blank" data-proyecto="${id}">
+					Ver Más
+				</button>
+			</div>
+		`;
+
+		padre.appendChild(contenedor);
+	});
 }
 
 function alHacerScroll () {
@@ -58,64 +83,106 @@ function clickMenu (e) {
 	}
 }
 
-function abrirSlider(e) {
+function clickEnProyectos(e) {
 	const target = e.target;
 
-	if (target.hasAttribute("data-imagenes")) {
-		const info = JSON.parse(target.getAttribute("data-imagenes"));
+	const sliderImagen = document.querySelector(".imagen-seleccionada");
+	const sliderCabecera = document.querySelector(".slider .cabecera");
+	const sliderTexto = document.querySelector(".slider .texto");
 
-		const titulo = info[0];
-		const texto = info[1];
+	const proyectoTitulo = document.querySelector("#proyectoTitulo");
+	const proyectoImagen = document.querySelector(".modal-imagen");
+	const descripcionContenedor = document.querySelector("#proyectoDescripcionContenedor");
+	const descripcionContenido = document.querySelector("#proyectoDescripcion");
+	const botonVisitar = document.querySelector("#proyectoBotonVisitar");
+	const imagenesSeccion = document.querySelector(".modal-imagenes");
+	const proyectoHerramientas = document.querySelector("#proyectoHerramientas");
 
-		limpiarSlider();
+	if (target.hasAttribute("data-proyecto")) {
+		const id = target.getAttribute("data-proyecto");
 
-		for (let i = 2; i < info.length; i++) {
-			const li = document.createElement("li");
+		const {
+			imagen,
+			url,
+			titulo,
+			descripcion,
+			imagenes,
+			herramientas,
+		} = listaProyectos.find(item => item.id === id);
 
-			const img = document.createElement("img");
-			img.src = info[i];
-			img.className = "imagen-miniatura";
-
-			li.appendChild(img);
-
-			sliderLista.appendChild(li);
+		while (listaImagenes.firstChild) {
+			listaImagenes.firstChild.remove();
 		}
 
-		sliderImagen.src = info[2];
-		sliderCabecera.innerHTML = titulo;
-		sliderTexto.innerHTML = texto;
+		if (imagenes) {
+			imagenesSeccion.classList.remove("esconder");
 
-		slider.classList.remove("esconder");
+			imagenes.forEach(imagen => {
+				const li = document.createElement("li");
+
+				const img = document.createElement("img");
+				img.src = imagen;
+				img.className = "imagen-miniatura";
+
+				li.appendChild(img);
+
+				listaImagenes.appendChild(li);
+			});
+		} else {
+			imagenesSeccion.classList.add("esconder");
+		}
+
+		while (proyectoHerramientas.firstChild) {
+			proyectoHerramientas.firstChild.remove();
+		}
+
+		herramientas.forEach(herramienta => {
+			const li = document.createElement("li");
+			li.textContent = herramienta;
+			proyectoHerramientas.appendChild(li);
+		});
+
+		proyectoImagen.src = imagen;
+		proyectoTitulo.innerHTML = titulo;
+
+		if (descripcion) {
+			descripcionContenedor.classList.remove("esconder");
+			descripcionContenido.innerHTML = descripcion;
+		} else {
+			descripcionContenedor.classList.add("esconder");
+		}
+
+		if (url) {
+			botonVisitar.classList.remove("esconder");
+			botonVisitar.href = url;
+		} else {
+			botonVisitar.classList.add("esconder");
+		}
+
+		imagenSeleccionada.src = "";
+
+		modal.classList.remove("esconder");
+
+		// Remover scroll del cuerpo
+		document.body.style.overflow = "hidden";
 	}
 }
 
-function cerrarSlider() {
-	slider.classList.add("esconder");
-}
-
-function limpiarSlider() {
-	while (sliderLista.firstChild) {
-		sliderLista.removeChild(sliderLista.firstChild);
-	}
+function cerrarModal() {
+	modal.classList.add("esconder");
+	document.body.style.overflow = "auto";
 }
 
 function abrirMiniatura(e) {
 	const target = e.target;
 
 	if (target.classList.contains("imagen-miniatura")) {
-		sliderImagen.src = target.src;
-		sliderImagen.scrollIntoView();
+		imagenSeleccionada.src = target.src;
+		imagenSeleccionada.scrollIntoView();
 	}
 	
 }
 
-function clickSlider(e) {
-	const target = e.target;
-
-	if (target.classList.contains("slider")) {
-		cerrarSlider();
-	}
-}
 
 function enMenuMedia(x) {
 	console.log(x.matches);

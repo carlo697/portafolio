@@ -239,6 +239,7 @@ button {
 	border-radius: 30px;
 	transition: 0.2s;
 	display: inline-block;
+	text-align: center;
 }
 
 .boton:hover {
@@ -426,16 +427,12 @@ p a {
 }
 
 .proyecto-titulo {
-	margin-bottom: 0.6em;
-	height: 50px;
+	text-align: center;
+	height: 70px;
 }
 
 .proyecto-img-contenedor {
 	display: block;
-}
-
-.proyecto-caja a {
-	margin: 0 auto;
 }
 
 .proyecto-img {
@@ -570,61 +567,113 @@ p a {
 
 
 
-.slider {
+.modal {
 	position: fixed;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.98);
 	top: 0;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	z-index: 2000;
 
 	display: flex;
 	flex-direction: column;
 
-	padding: 20px;
-
 	overflow: auto;
 	color: white;
 }
 
-.slider .cabecera {
-	margin-bottom: 5px;
+.modal-centro {
+	padding: 30px 20px;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.modal h4 {
+	max-width: 80%;
+	font-size: 1.3em;
+	margin-bottom: 1em;
 	text-align: center;
 }
 
-.slider .texto {
-	margin-bottom: 5px;
+.modal-seccion {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2em;
+}
+
+.modal-seccion > div {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-imagen {
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	object-fit: contain;
+}
+
+@media (min-width: 700px) {
+	.modal-seccion {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	.modal-imagen {
+		width: 50%;
+		margin: 0;
+		margin-bottom: 0;
+		margin-right: 2em;
+	}
+}
+
+.modal p {
 	font-size: 0.9em;
+	margin-bottom: 1em;
+	text-align: justify;
 }
 
-.slider br {
-	margin-bottom: 10px;
+.descripcion-dato {
+	background-color: #6f86d6;
+	padding: 0.2em;
+	margin-right: 0.5em;
+	margin-bottom: 0.1em;
+	display: inline-block;
+	border-radius: 0.3em;
 }
 
-@media (min-width: 500px) {
-	.slider .cabecera {
-		margin-bottom: 20px;
-	}
-
-	.slider .texto {
-		margin-bottom: 20px;
-	}
+.modal-seccion li {
+	margin-left: 3em;
+	line-height: 1.5;
 }
+
+.modal-seccion .boton {
+	width: 10em;
+	margin-bottom: 2em;
+	align-self: center;
+}
+
 
 .imagen-seleccionada {
-	width: 90vw;
+	max-width: 100%;
 	object-fit: contain;
 	margin-bottom: 20px;
 }
 
-.slider ul {
+.modal-imagenes {
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+
+.modal-imagenes ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.slider ul li {
+.modal-imagenes ul li {
 	list-style: none;
 }
 
@@ -642,11 +691,12 @@ p a {
 	transform: scale(1.1);
 }
 
+
 .boton-cerrar {
 	position: fixed;
 	top: 0;
 	right: 0;
-	margin: 20px;
+	margin: 20px 30px;
 	font-size: 2em;
 	background-color: transparent;
 	color: var(--vermillion);
@@ -654,9 +704,10 @@ p a {
 
 .boton-cerrar:hover {
 	transform: scale(1.1);
+	filter: brightness(0.9);
 }
 
 
 .esconder {
-	display: none;
+	display: none !important;
 }
