@@ -715,3 +715,32 @@ p a {
 .esconder {
 	display: none !important;
 }
+
+
+.escritura {
+	margin: 0;
+	color: gray;
+	animation: escritura 0.7s infinite;
+}
+
+@keyframes escritura {
+	0% {
+		opacity: 0;
+	}
+
+	40% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
