@@ -1,17 +1,11 @@
 const listaProyectos = [
 	{
-		id: "23as2j",
-		imagen: "img/landing2.jpg",
-		url: "https://carlo697.github.io/landing-02/",
-		titulo: "Landing Page para Restaurante",
-		herramientas: ["HTML", "CSS"],
-	},
-	{
-		id: "dai29c",
-		imagen: "img/landing1.jpg",
-		url: "https://carlo697.github.io/landing-01/",
-		titulo: "Landing Page Genérica",
-		herramientas: ["HTML", "CSS"],
+		id: "288saf",
+		imagen: "img/modulo-caudal.jpg",
+		url: "https://carlo697.github.io/modulo-caudal/",
+		titulo: "Aula Virtual de Instrumentación",
+		herramientas: ["HTML", "CSS", "JavaScript", "Adobe Illustrator", "Automation Studio", "Microsoft Visio", "Conocimiento en Instrumentación y Control"],
+		descripcion: "Se trata de una página web front-end creada como aula virtual para los estudiantes de la UPTValencia. La pagina cuenta con un tablero de control y un proceso virtual totalmente funcional que permiten realizar una serie de prácticas de laboratorio.<br><br>Esta página es producto de una propuesta de proyecto universitario para obtener el título de Técnico Superior Universitario en Instrumentación y Control, en la Universidad Politécnica Territorial de Valencia.",
 	},
 	{
 		id: "9dj2hx",
@@ -26,6 +20,20 @@ const listaProyectos = [
 		url: "https://carlo697.github.io/buscador-canciones/",
 		titulo: "Buscador de Canciones",
 		herramientas: ["HTML", "CSS", "Javascript", "Lyrics.ovh API"],
+	},
+	{
+		id: "23as2j",
+		imagen: "img/landing2.jpg",
+		url: "https://carlo697.github.io/landing-02/",
+		titulo: "Landing Page para Restaurante",
+		herramientas: ["HTML", "CSS"],
+	},
+	{
+		id: "dai29c",
+		imagen: "img/landing1.jpg",
+		url: "https://carlo697.github.io/landing-01/",
+		titulo: "Landing Page Genérica",
+		herramientas: ["HTML", "CSS"],
 	},
 	{
 		id: "sj2mch",
