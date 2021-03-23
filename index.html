@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<script src="https://kit.fontawesome.com/e89d481fed.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,600,700,800" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,600,700" rel="stylesheet">
 	</head>
 	<body>
 		<!-- Header -->
@@ -166,38 +166,51 @@
 		</a>
 
 		<div class="modal esconder">
-			<div class="modal-centro">
-				<h4 id="proyectoTitulo">Titulo</h4>
-				<div class="modal-seccion">
-					<img class="modal-imagen" src="img/capacimetro1.jpg" alt="">
-					<div>
-						<a id="proyectoBotonVisitar" class="boton" href="https://carlo697.github.io/calculo-figuras/" target="_blank">Visitar</a>
-
-						<p id="proyectoDescripcionContenedor"><span class="descripcion-dato">Descripción:</span><span id="proyectoDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus sollicitudin arcu id scelerisque. Mauris sollicitudin varius tortor, vitae pharetra turpis rutrum in.<br><br>Donec tortor turpis, venenatis ac interdum eu, viverra quis libero. Donec aliquam suscipit vulputate. Maecenas venenatis dolor nunc, eget rutrum magna porttitor id.</span></p>
-
-						<p><span class="descripcion-dato">Construido con:</span>
-							<ul id="proyectoHerramientas">
-							    <li>HTML</li>
-							    <li>CSS</li>
-							</ul>
-						</p>
+			<div class="modal-caja">
+				<header>
+					<div class="fila">
+						<h4 id="proyectoTitulo">Titulo</h4>
+						<button id="botonCerrarModal" class="boton-cerrar">
+							<i class="fas fa-times"></i>
+						</button>
 					</div>
-				</div>
-				
-				<div class="modal-imagenes">
-					<h4>Imágenes</h4>
-					<ul class="imagenes-lista">
-					</ul>
-				</div>
+					
+					<div class="modal-enlaces">
+						<a href="#" class="enlace">
+							<i class="fa fa-github"></i>
+							Codigo Fuente
+						</a>
+						<a id="proyectoBotonVisitar" class="boton" href="https://carlo697.github.io/calculo-figuras/" target="_blank">
+							Visitar
+							<i class="fa fa-link"></i>
+						</a>
+					</div>
+				</header>
+				<img class="modal-imagen" src="img/capacimetro1.jpg" alt="">
+				<div class="modal-contenido">
+					<div>
+						<div id="proyectoDescripcionContenedor">
+							<h5>Descripción</h5>
+							<p id="proyectoDescripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus sollicitudin arcu id scelerisque. Mauris sollicitudin varius tortor, vitae pharetra turpis rutrum in.<br><br>Donec tortor turpis, venenatis ac interdum eu, viverra quis libero. Donec aliquam suscipit vulputate. Maecenas venenatis dolor nunc, eget rutrum magna porttitor id.</span></p>
+						</div>
 
-				<img class="imagen-seleccionada" src="">
+						<h5>Construido con</h5>
+						<ul id="proyectoHerramientas">
+						    <li>HTML</li>
+						    <li>CSS</li>
+						</ul>
+					</div>
+					
+					<div class="modal-imagenes">
+						<h5>Imágenes</h5>
+						<ul class="imagenes-lista">
+						</ul>
+					</div>
 
-				<button id="botonCerrarModal" class="boton-cerrar">
-					<i class="fas fa-window-close"></i>
-				</button>
+					<img class="imagen-seleccionada" src="">
+				</div>
 			</div>
 		</div>
-
 		<script src="js/listaProyectos.js"></script>
 		<script src="js/index.js"></script>
 		<script src="js/titulo.js"></script>
