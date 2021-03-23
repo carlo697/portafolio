@@ -283,6 +283,13 @@ button {
 	margin-bottom: 20px;
 }
 
+.informacion-enlaces {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 2em;
+}
+
 @media (min-width: 700px) {
 	.foto {
 		width: 35%;
@@ -589,6 +596,13 @@ p a {
 .enlace {
 	color: var(--vermillion);
 	display: inline-block;
+	display: flex;
+	align-items: center;
+}
+
+.enlace .icono {
+	margin-right: 0.3em;
+	font-size: 1.2em;
 }
 
 .fila {
