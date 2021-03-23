@@ -171,8 +171,8 @@ button {
 
 .area-titulo {
 	font-size: 2.5em;
-	font-weight: 600;
-	color: #333333;
+	font-weight: normal;
+	color: var(--gris);
 	margin-bottom: 5px;
 	letter-spacing: 3px;
 }
@@ -180,7 +180,7 @@ button {
 
 
 .linea {
-	background-color: black;
+	background-color: var(--gris);
 	height: 2px;
 	width: 100px;
 	margin-bottom: 80px;
@@ -429,6 +429,7 @@ p a {
 .proyecto-titulo {
 	text-align: center;
 	height: 70px;
+	font-weight: 600;
 }
 
 .proyecto-img-contenedor {
