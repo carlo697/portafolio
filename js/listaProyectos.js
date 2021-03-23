@@ -1,5 +1,22 @@
 const listaProyectos = [
 	{
+		id: "j28d63",
+		imagen: "img/neat-timer.png",
+		url: "https://neat-timer.herokuapp.com/",
+		codigo: "https://github.com/carlo697/NeatTimer",
+		titulo: "Neat Timer",
+		herramientas: [
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"React, React Hooks, React Router, React Icons y React Helmet",
+			"Notificaciones de Navegador",
+			"World Time API",
+			"Heroku"
+		],
+		descripcion: "Esta aplicación web contiene múltiples herramientas bastante útiles para medir el tiempo.  Posee un cronometro, un reloj con la opción de obtener la hora en línea, un temporizador de cuenta regresiva y alarmas personalizables.<br><br>Tanto el temporizador como las alarmas hacen uso de sonido y notificaciones de navegador para informar al usuario que el tiempo ha acabado.",
+	},
+	{
 		id: "288saf",
 		imagen: "img/modulo-caudal.jpg",
 		url: "https://carlo697.github.io/modulo-caudal/",
