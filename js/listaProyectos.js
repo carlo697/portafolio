@@ -69,13 +69,21 @@ const listaProyectos = [
 		herramientas: ["HTML", "CSS", "Javascript", "Pixabay API"],
 	},
 	{
+		id: "j2u4ax",
+		imagen: "img/capacimetro.jpg",
+		titulo: "Capacímetro con PIC",
+		herramientas: ["Lenguaje C", "PIC16F628A", "PIC C COMPILER CCS", "Proteus 8"],
+		descripcion: "Este proyecto fue un medidor de capacitancia con un rango máximo de 2000 uF, fue realizado con un microcontrolador PIC16F628A y previo a su montaje físico en una protoboard se simuló con el software Proteus 8. <br><br>Su principio es el de medir la capacitancia al contar cuanto tiempo tarda en cargarse el capacitor hasta un tercio de la tensión de la fuente de alimentación (5 V en este caso). El circuito utiliza dos transistores para cargar y descargar el capacitor al realizar una medición, y cuenta con 4 displays de 7 segmentos para mostrar el resultado.",
+		imagenes: ["img/capacimetro1.jpg", "img/capacimetro2.png"]
+	},
+	/*{
 		id: "9jq12h",
 		imagen: "img/buscador_canciones.jpg",
 		url: "https://carlo697.github.io/buscador-canciones/",
 		codigo: "https://github.com/carlo697/buscador-canciones",
 		titulo: "Buscador de Canciones",
 		herramientas: ["HTML", "CSS", "Javascript", "Lyrics.ovh API"],
-	},
+	},*/
 	{
 		id: "23as2j",
 		imagen: "img/landing2.jpg",
@@ -99,13 +107,5 @@ const listaProyectos = [
 		codigo: "https://github.com/carlo697/calculo-figuras",
 		titulo: "Calculo de variables de figuras geométricas",
 		herramientas: ["HTML", "CSS", "Javascript"],
-	},
-	{
-		id: "j2u4ax",
-		imagen: "img/capacimetro.jpg",
-		titulo: "Capacímetro con PIC",
-		herramientas: ["Lenguaje C", "PIC16F628A", "PIC C COMPILER CCS", "Proteus 8"],
-		descripcion: "Este proyecto fue un medidor de capacitancia con un rango máximo de 2000 uF, fue realizado con un microcontrolador PIC16F628A y previo a su montaje físico en una protoboard se simuló con el software Proteus 8. <br><br>Su principio es el de medir la capacitancia al contar cuanto tiempo tarda en cargarse el capacitor hasta un tercio de la tensión de la fuente de alimentación (5 V en este caso). El circuito utiliza dos transistores para cargar y descargar el capacitor al realizar una medición, y cuenta con 4 displays de 7 segmentos para mostrar el resultado.",
-		imagenes: ["img/capacimetro1.jpg", "img/capacimetro2.png"]
 	},
 ];
