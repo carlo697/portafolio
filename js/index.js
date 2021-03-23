@@ -95,6 +95,7 @@ function clickEnProyectos(e) {
 	const descripcionContenedor = document.querySelector("#proyectoDescripcionContenedor");
 	const descripcionContenido = document.querySelector("#proyectoDescripcion");
 	const botonVisitar = document.querySelector("#proyectoBotonVisitar");
+	const botonCodigo = document.querySelector("#proyectoBotonCodigo");
 	const imagenesSeccion = document.querySelector(".modal-imagenes");
 	const proyectoHerramientas = document.querySelector("#proyectoHerramientas");
 
@@ -104,6 +105,7 @@ function clickEnProyectos(e) {
 		const {
 			imagen,
 			url,
+			codigo,
 			titulo,
 			descripcion,
 			imagenes,
@@ -157,6 +159,13 @@ function clickEnProyectos(e) {
 			botonVisitar.href = url;
 		} else {
 			botonVisitar.classList.add("esconder");
+		}
+
+		if (codigo) {
+			botonCodigo.classList.remove("esconder");
+			botonCodigo.href = codigo;
+		} else {
+			botonCodigo.classList.add("esconder");
 		}
 
 		imagenSeleccionada.src = "";
