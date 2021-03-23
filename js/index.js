@@ -1,3 +1,4 @@
+const fechaCopyright = document.querySelector("#fechaCopyright");
 const header = document.querySelector(".area-nav");
 const botonMenu = document.querySelector(".barra-toggle");
 const botonSubir = document.querySelector(".boton-subir");
@@ -30,6 +31,8 @@ function eventListeners() {
 	listaImagenes.addEventListener("click", abrirMiniatura);
 
 	menuMedia.addListener(enMenuMedia);
+
+	fechaCopyright.textContent = new Date().getFullYear();
 }
 
 function mostrarProyectos() {
